@@ -1,6 +1,7 @@
-- name: Sample Playbook
+---
+- name: First Sample Playbook 
   hosts: all
   tasks:
-    - name: This statement will print Hello World
-      ansible.builtin.debug:
-        msg: Hello World1
+   - name: Printing Hello World
+     ansible.builtin.debug:
+       msg: Hello subbu
