@@ -4,6 +4,6 @@
   become: yes # To run commands as root 
   tasks:
     -name: Install Nginx Server
-      yum:
+     yum:
         name: nginx
         state: present
