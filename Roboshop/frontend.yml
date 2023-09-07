@@ -13,7 +13,7 @@
         path: /usr/share/nginx/html
         state: absent
     
-     - name: Create the Directory
+    - name: Create the Directory
       file:
         path: /usr/share/nginx/html
         state: directory
