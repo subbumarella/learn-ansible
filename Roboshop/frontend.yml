@@ -7,3 +7,8 @@
       yum:
         name: nginx
         state: present
+    
+    - name: Remove the Directory
+      file:
+        path: /usr/share/nginx/html
+        state: absent
