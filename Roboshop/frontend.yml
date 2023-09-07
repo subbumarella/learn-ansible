@@ -3,7 +3,7 @@
   hosts: all
   become: yes # To run commands as root 
   tasks:
-    -name: Install Nginx Server
-     yum:
+    - name: Install Nginx Server
+      yum:
         name: nginx
         state: present
