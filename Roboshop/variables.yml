@@ -5,5 +5,5 @@
       URL: example.com
     tasks: 
       - name: Printing the URL
-        ansible.printin.debug:
+        ansible.builtin.debug:
           msg: URL - {{URL}}
