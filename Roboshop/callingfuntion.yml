@@ -5,6 +5,4 @@
       - name: Here the a function is calling 
         ansible.builtin.var_files:
           file: calledfunction.yml
-      - name: Here the values will print
-        ansible.builtin.debug:
-          msg: variable
+      
