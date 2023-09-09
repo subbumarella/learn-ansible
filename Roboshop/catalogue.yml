@@ -1,0 +1,6 @@
+---
+  - name: Setup Catalogue
+    hosts: all
+    become: yes
+    tasks: 
+    - name: 
