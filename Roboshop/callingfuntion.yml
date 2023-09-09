@@ -3,6 +3,6 @@
     hosts: all
     tasks: 
       - name: Here the a function is calling 
-        ansible.builtin.var_files:
+        ansible.builtin.include_vars:
           file: calledfunction.yml
       
