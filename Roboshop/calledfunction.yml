@@ -1,9 +1,6 @@
 --- 
   - name: This is Called function
-    hosts: all
-    tasks: 
-      - name: Printing Hello world
-        ansible.builtin.debug:
-          msg: Hello world
+    ansible.builtin.debug:
+      msg: Hello world
         
     
