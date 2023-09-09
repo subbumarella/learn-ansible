@@ -1,0 +1,9 @@
+---
+  - name: Declaring variables
+    hosts: all
+    vars: 
+      URL: example.com
+    tasks: 
+      - name: Printing the URL
+        ansible.printin.debug:
+          msg: URL - {{URL}}
