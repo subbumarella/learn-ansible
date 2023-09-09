@@ -9,7 +9,7 @@
           dest: /etc/yum.repos.d/mongo.repo
         
     - name: Install mongodb
-      ansible.bulitin.yum:
+      ansible.builtin.yum:
           name: mongodb-org
           state: latest
 
