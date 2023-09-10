@@ -1,4 +1,4 @@
 ---
- - name: Print Hello World
+ - name: Print Hello world 1
    ansible.builtin.debug:
-     msg : hello world from role
+      msg: this is hello world
