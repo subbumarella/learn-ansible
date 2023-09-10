@@ -7,9 +7,9 @@
      name: nodejs
      state: installed
 
-  - name: App Pre-requisites
-    ansible.builtin.include_tasks:
-        file: app-presetup.yml
+ - name: App Pre-requisites
+   ansible.builtin.include_tasks:
+     file: app-presetup.yml
 
 
 
