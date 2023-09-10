@@ -1,9 +1,0 @@
----
-  - name: Declaring variables
-    hosts: all
-    vars: 
-      URL: example.com
-    tasks: 
-      - name: Printing the URL
-        ansible.builtin.debug:
-          msg: URL - {{URL}}
