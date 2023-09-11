@@ -11,6 +11,17 @@
    ansible.builtin.include_tasks:
      file: app-presetup.yml
 
+ - name: Load Nodejs npm
+   ansible.builtin.shell: npm install
+   args:
+    chdir: /app
+
+ - name: System SetUp
+   ansible.builtin.include_tasks:
+     file: systemd_setup.yml
+
+    
+
 
 
 
