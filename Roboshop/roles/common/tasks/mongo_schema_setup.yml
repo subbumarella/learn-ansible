@@ -6,7 +6,7 @@
   
   - name: Install Mongodb client
     ansible.builtin.yum:
-     name: /etc/yum.repos.d/mongo.repo
+     name: ansible.builtin.shell
      state: installed
   
   - name: Load schema
