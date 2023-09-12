@@ -5,6 +5,6 @@
       tasks_from: nodejs
   
   - name: Load user schema
-    ansible.builtin.import _role:
+    ansible.builtin.import_role:
       name: common
       tasks_from: mongo_schema_setup
