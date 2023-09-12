@@ -1,11 +1,11 @@
 ---
   - name: Install Redis
-    anisible.builtin.yum:
+    ansible.builtin.yum:
       name: https://rpms.remirepo.net/enterprise/remi-release-8.rpm
       state: installed
 
   - name: Enable the Redis 6 version
-    anisible.builtin.shell: yum module enable redis:remi-6.2 -y
+    ansible.builtin.shell: yum module enable redis:remi-6.2 -y
     
   - name: Install Redis
     ansible.builtin.yum:
