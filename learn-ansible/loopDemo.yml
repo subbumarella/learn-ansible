@@ -11,6 +11,6 @@
       - name: Printing fruits
         ansible.builtin.debug:
           msg:"The fruits are {{ item }}"
-        items_with: "{{ items_to_loop }}"
+        with_items : "{{ items_to_loop }}"
 
   
