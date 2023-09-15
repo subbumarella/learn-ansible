@@ -1,16 +1,33 @@
+# --- 
+#   - name: Demo on looping
+#     hosts: localhost
+#     connection: local
+#     vars:
+#       items_to_loop:
+#         - apple
+#         - bananna
+#         - orange
+#     tasks:
+#       - name: Printing fruits
+#         ansible.builtin.debug:
+#           msg:  "The fruits are {{ item }}"
+#         loop : "{{ items_to_loop }}"
+
+
 --- 
-  - name: Demo on looping
+  - name: Demo on loop
     hosts: localhost
     connection: local
     vars:
       items_to_loop:
-        - apple
-        - bananna
-        - orange
+        - bus
+        - car
+        - bike
+        - auto
     tasks:
-      - name: Printing fruits
+      - name: printing vehicals
         ansible.builtin.debug:
-          msg:  "The fruits are {{ item }}"
-        loop : "{{ items_to_loop }}"
+          msg: "the vehicle is {{ item }}"
+        loop: "{{ items_to_loop }}"
 
   
