@@ -6,9 +6,9 @@
       - name: Printing Hello Universe
         ansible.builtin.debug:
           msg: Hello Universe
-        when: val="universe"
+        when: val == "universe"
 
       - name: Printing Hello world
         ansible.builtin.debug:
           msg: Hello world
-        when: val ="world"
+        when: val == "world"
