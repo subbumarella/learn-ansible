@@ -1,6 +1,6 @@
 ---
   - name: Demo on conditions
-    hosts: localhosts
+    hosts: localhost
     connection: local
     tasks:
       - name: Printing Hello Universe
