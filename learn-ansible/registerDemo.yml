@@ -4,7 +4,7 @@
     connection: local
     tasks:
       - name: Print local variables
-        ansible.builtin.shell: date
+        ansible.builtin.shell: date + "%Y-%m-%d"
         register: output
 
       - name: Print output
