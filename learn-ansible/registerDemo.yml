@@ -9,4 +9,5 @@
 
       - name: Print output
         ansible.builtin.debug:
-          msg: "Today date is {{  output | strftime('%Y-%m-%d')}}" 
+          # msg: "Today date is {{  output | strftime('%Y-%m-%d')}}" 
+          msg: "{{ ansible_date_time.date | strftime('%Y-%m-%d') }}"
