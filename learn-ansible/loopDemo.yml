@@ -20,14 +20,14 @@
     connection: local
     vars:
       items_to_loop:
-        - bus
-        - car
-        - bike
-        - auto
+        - {name: bus, price: 10k}
+        - {name: car, price: 20k}
+        - {name: bike, price: 25k}
+        - {name: auto, price: 30K}
     tasks:
       - name: printing vehicals
         ansible.builtin.debug:
-          msg: "the vehicle is {{ item }}"
+          msg: "the vehicle name is {{ item.name }}, price is {{ item.price }}"
         loop: "{{ items_to_loop }}"
 
   
