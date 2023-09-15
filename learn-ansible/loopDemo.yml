@@ -3,10 +3,10 @@
     hosts: localhost
     connection: local
     tasks:
-      -name: Printing fruits
-      ansible.builtin.debug:
-        msg: The fruits are {{item}}
-      loop: 
-        - apple
-        - bananna
-        - orange
+        - name: Printing fruits
+          ansible.builtin.debug:
+            msg: The fruits are {{item}}
+          loop: 
+            - apple
+            - bananna
+            - orange
