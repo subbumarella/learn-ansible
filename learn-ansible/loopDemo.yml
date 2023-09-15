@@ -14,20 +14,36 @@
 #         loop : "{{ items_to_loop }}"
 
 
---- 
-  - name: Demo on loop
-    hosts: localhost
-    connection: local
-    vars:
-      items_to_loop:
-        - {name: bus, price: 10k}
-        - {name: car, price: 20k}
-        - {name: bike, price: 25k}
-        - {name: auto, price: 30K}
-    tasks:
-      - name: printing vehicals
-        ansible.builtin.debug:
-          msg: "the vehicle name is {{ item.name }}, price is {{ item.price }}"
-        loop: "{{ items_to_loop }}"
+# --- 
+#   - name: Demo on loop
+#     hosts: localhost
+#     connection: local
+#     vars:
+#       items_to_loop:
+#         - {name: bus, price: 10k}
+#         - {name: car, price: 20k}
+#         - {name: bike, price: 25k}
+#         - {name: auto, price: 30K}
+#     tasks:
+#       - name: printing vehicals
+#         ansible.builtin.debug:
+#           msg: "the vehicle name is {{ item.name }}, price is {{ item.price }}"
+#         loop: "{{ items_to_loop }}"
+
+    - name: Demo on loop
+      hosts: localhost
+      connection: local
+      vars:
+        items_to_loop:
+          - {name: tv, price: 10k}
+          - {name: mobile, price: 20k}
+          - {name: watch, price: 30k}
+      tasks:
+        - name: printing gadgets
+          ansible.builtin.debug:
+            msg: "Gedget name is {{item.name}}, Price is {{item.price}}"
+          loop: "{{items_to_loop}}"
+
+
 
   
