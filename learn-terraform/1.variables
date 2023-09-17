@@ -1,0 +1,31 @@
+variable "plain"{
+   default= "Devops Training"
+}
+
+variable "Course_List_Type"{
+    default = [
+        "Devops",
+        "Python",
+        "AWS"
+    ]
+}
+
+variable "Course_Map_Type"{
+    default={
+        Devops={
+            name= "Devops"
+            Timing= "2hrs"
+            Duraion= 90
+        }
+    }
+}
+
+output "Plain"{
+    value=var.plain
+}
+output "Course_List_Type"{
+    value=var.Course_List_Type
+}
+output "Course_Map_Type"{
+    value=var.Course_Map_Type
+}
