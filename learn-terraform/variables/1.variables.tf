@@ -24,8 +24,8 @@ output "plain"{
     value=var.plain
 }
 output "course_List_Type"{
-    value=var.Course_List_Type
+    value=var.course_List_Type
 }
 output "course_Map_Type"{
-    value=var.Course_Map_Type
+    value=var.course_Map_Type
 }
