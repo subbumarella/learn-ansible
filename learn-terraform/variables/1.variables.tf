@@ -17,15 +17,20 @@ variable "course_Map_Type"{
             Timing= "2hrs"
             Duraion= 90
         }
+        AWS={
+            Name= "AWS"
+            Timing="4hrs"
+            Duraion=40
+        }
     }
 }
 
 output "plain"{
-    value="The value is -${var.plain}"
+    value=var.plain
 }
 output "course_List_Type"{
-    value="The course type is -${var.course_List_Type}"
+    value=var.course_List_Type
 }
 output "course_Map_Type"{
-    value="The Course Map Type is -${var.course_Map_Type}"
+    value=var.course_Map_Type["Devops"]
 }
