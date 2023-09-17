@@ -1,8 +1,4 @@
-provider "aws"{
- region= "us-east-1"
- access_key= "AKIA35ZTANOD2LLS32D6"
- secret_key= "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"
-}
+
 
 resource "aws_instance" "FirstEC2Instace"{
     ami= "ami-03265a0778a880afb"
