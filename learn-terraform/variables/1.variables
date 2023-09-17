@@ -2,7 +2,7 @@ variable "plain"{
    default= "Devops Training"
 }
 
-variable "Course_List_Type"{
+variable "course_List_Type"{
     default = [
         "Devops",
         "Python",
@@ -10,7 +10,7 @@ variable "Course_List_Type"{
     ]
 }
 
-variable "Course_Map_Type"{
+variable "course_Map_Type"{
     default={
         Devops={
             name= "Devops"
@@ -20,12 +20,12 @@ variable "Course_Map_Type"{
     }
 }
 
-output "Plain"{
+output "plain"{
     value=var.plain
 }
-output "Course_List_Type"{
+output "course_List_Type"{
     value=var.Course_List_Type
 }
-output "Course_Map_Type"{
+output "course_Map_Type"{
     value=var.Course_Map_Type
 }
