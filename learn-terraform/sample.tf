@@ -6,3 +6,7 @@ resource "aws_instance" "FirstEC2Instace"{
         Name= "Sample EC2"
     }    
 }
+
+output "getting_IP_Address"{
+    value = aws_instance.FirstEC2Instace.public_ip
+}
