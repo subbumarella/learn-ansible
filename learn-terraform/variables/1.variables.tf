@@ -32,5 +32,5 @@ output "course_List_Type"{
     value=var.course_List_Type
 }
 output "course_Map_Type"{
-    value=var.course_Map_Type["Devops"]
+    value=var.course_Map_Type["AWS"]
 }
