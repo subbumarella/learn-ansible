@@ -4,7 +4,7 @@ provider "aws"{
  secret_key= "M34rrEMrbiL49j5lT8UoYecX31Dv31fbonGD1Db5"
 }
 
-resource "aws_instance" "My First EC2 Instace"{
+resource "aws_instance" "MyFirstEC2Instace"{
     ami= "ami-03265a0778a880afb"
     instance_type= "t2.micro"
     tags={
