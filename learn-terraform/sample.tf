@@ -5,9 +5,8 @@ provider "aws"{
 }
 
 resource "aws_instance" "My First EC2 Instace"{
-    ami= "ami-04cb4ca688797756f"
+    ami= "ami-03265a0778a880afb"
     instance_type= "t2.micro"
-    key_name= "roboshopkeypair"
     tags={
         Name= "Sample EC2"
     }    
