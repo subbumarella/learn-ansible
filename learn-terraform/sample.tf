@@ -7,6 +7,11 @@ resource "aws_instance" "FirstEC2Instace"{
     }    
 }
 
-output "getting_IP_Address"{
+output "public_ip_address"{
+    description = "Getting Public IP Address"
     value = aws_instance.FirstEC2Instace.public_ip
+}
+output "security_groups "{
+    description= "Getting Security Groups"
+    value =aws_instance.FirstEC2Instace.security_groups
 }
