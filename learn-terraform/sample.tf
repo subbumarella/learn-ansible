@@ -11,7 +11,4 @@ output "public_ip_address"{
     description = "Getting Public IP Address"
     value = "The Public IP is - ${aws_instance.FirstEC2Instace.public_ip}"
 }
-output "security_groups"{
-    description= "Getting Security Groups"
-    value ="the Security group is - ${aws_instance.FirstEC2Instace.security_groups}"
-}
+    
