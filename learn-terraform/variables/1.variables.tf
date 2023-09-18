@@ -35,8 +35,8 @@ output "course_Map_Type"{
     value=var.course_Map_Type["AWS"]
 }
 
-variable "env"{}
+variable "env1"{}
 
 output "env"{
-    value=var.env
+    value=var.env1
 }
