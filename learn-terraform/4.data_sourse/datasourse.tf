@@ -12,8 +12,8 @@ data "aws_security_group" "sg"{
     name="allow-all"
 }
 
-output "aws_price"{
-    value=data.aws_security_group.sg.id
+output "aws_security_group"{
+    value=data.aws_security_group.sg.name
 }
 
 output "price"{
