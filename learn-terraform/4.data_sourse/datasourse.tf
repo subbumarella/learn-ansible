@@ -24,7 +24,7 @@ output "spot_price_timestamp"{
 }
 
 data "aws_ami" "ami"{
-    excutable_users=["amazon"]
+    executable_users=["amazon"]
     most_recent=true
     name_regex="Centos-8-DevOps-Practice"
 }
