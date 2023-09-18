@@ -9,5 +9,8 @@ data "aws_ec2_spot_price" "ex"{
 }
 
 output "price"{
-    value=data.aws_ec2_spot_price.ex.spot_price && data.aws_ec2_spot_price.spot_price_timestamp
+    value=data.aws_ec2_spot_price.ex.spot_price
+}
+output "spot_price_timestamp"{
+    value=data.aws_ec2_spot_price.spot_price_timestamp
 }
