@@ -3,7 +3,7 @@ data "aws_ec2_spot_price" "ex"{
     availability_zone="us-east-1a"
 
     filter{
-        name="product description"
+        name="product-description"
         values=["Linux/UNIX"]
     }
 }
