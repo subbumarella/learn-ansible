@@ -34,3 +34,9 @@ output "course_List_Type"{
 output "course_Map_Type"{
     value=var.course_Map_Type["AWS"]
 }
+
+variable "env"{}
+
+output "env"{
+    value=var.env
+}
