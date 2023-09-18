@@ -23,6 +23,6 @@ resource "aws_instance" "ex"{
 output "Ip_Address" 
 {
     description="Getting public ip"
-    value="The ip Address is - ${aws_instance.ex.ip_address}"
+    value="The ip Address is - ${aws_instance.ex.public_ip}"
 }
 
