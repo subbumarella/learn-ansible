@@ -20,9 +20,7 @@ resource "aws_instance" "ex"{
     }
 } 
 
-output "Ip_Address" 
-{
-    description="Getting public ip"
+output "Ip_Address"{
     value="The ip Address is - ${aws_instance.ex.public_ip}"
 }
 
