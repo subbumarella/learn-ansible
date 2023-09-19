@@ -4,6 +4,9 @@ resource "aws_instance" "awsex"{
     tags={
         Name="HelloWorld"
     }
+    lifecycle{
+        prevent_destroy=true
+    }
 }
 
 data "aws_ami" "amiex"{
