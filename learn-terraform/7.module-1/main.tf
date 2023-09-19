@@ -12,6 +12,6 @@ output "public_ip_Sample1"{
     value=module.sample1.public_ip
 }
 
-output "public_ip_sample2"{
+output "public_ip_sample_2"{
     value=module.sample2.public_ip
 }
