@@ -35,4 +35,8 @@ resource "aws_security_group" "sg_example"{
 
 variable "name"{}
 
+output "public_ip"{
+    value=aws_instance.aws_example.public_ip
+}
+ 
 
