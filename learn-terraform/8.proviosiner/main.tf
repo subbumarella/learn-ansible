@@ -20,7 +20,7 @@ resource "aws_instance" "aws_instance_ex"{
         }
         inline=[
             "sudo labauto ansible",
-            "ansible-pull -i localhost, -U https://github.com/subbumarella/learn-ansible main.yml -e env=dev -e role_name=frontend "
+            "ansible-pull -i localhost, -U https://github.com/subbumarella/learn-ansible main.yml -e env=dev -e role_name=frontend"
         ]
     }
 }
