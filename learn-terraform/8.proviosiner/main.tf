@@ -16,7 +16,7 @@ resource "aws_instance" "aws_instance_ex"{
             type="ssh"
             user="centos"
             password="DevOps321"
-            host=self.public
+            host=self.public_ip
         }
         inline=[
             "sudo labauto ansible",
