@@ -16,5 +16,5 @@ locals {
 
 resource "aws_iam_user" "ex"{
    count=length(locals.my_list)
-   name=locals.my_list(count.index)
+   name=locals.my_list[count.index]
 }
