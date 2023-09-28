@@ -16,5 +16,9 @@ locals{
 
 resource "aws_iam_user" "ex"{
     for_each = { for idx , value in local.my_list: idx=>value}
-    name=each.value
+    ami=data.aws_ami.ami_ex.id
+    instance_type=t2.micro
+    tags={
+        Name=each.value
+    }    
 }
