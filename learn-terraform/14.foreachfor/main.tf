@@ -11,7 +11,7 @@ variable "user_names"{
 }
 
 resource "aws_instance" "ex"{
-    for_each = { for idx , value in local.my_list: idx=>value}
+    for_each = { for idx , value in var.user_names: idx=>value}
     ami=data.aws_ami.ami_ex.id
     instance_type=t2.micro
     name=each.value
