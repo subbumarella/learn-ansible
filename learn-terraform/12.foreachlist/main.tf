@@ -7,7 +7,7 @@ data "aws_ami" "ami_ex" {
 variable "user_names"{
     description="IAM user names"
     type=list(string)
-    default=["user7","user8","user9"]
+    default=["user8","user9","user10"]
 }
 
 resource "aws_iam_user" "ex"{
