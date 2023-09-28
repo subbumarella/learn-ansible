@@ -10,11 +10,11 @@ variable "user_names"{
     default=["user5","user6","user7"]
 }
 #converting set to list
-locals {
+local {
     my_list=tolist(var.user_names)
 }
 
 resource "aws_iam_user" "ex"{
-   count=length(locals.my_list)
-   name=locals.my_list[count.index]
+   count=length(local.my_list)
+   name=local.my_list[count.index]
 }
