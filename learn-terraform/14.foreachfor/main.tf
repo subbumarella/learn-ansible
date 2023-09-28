@@ -16,5 +16,6 @@ resource "aws_instance" "ex"{
     instance_type="t2.micro"    
     tags={
         Name=var.user_names[count.index] 
+        
     }    
 }
