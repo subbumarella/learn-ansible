@@ -7,7 +7,7 @@ data "aws_ami" "ami_ex" {
 variable "user_names"{
     description="IAM user"
     type=set(string)
-    default=["user11","user12","user13"]
+    default=["user14","user15","user16"]
 }
 
 locals{
