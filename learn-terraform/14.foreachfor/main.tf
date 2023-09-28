@@ -15,6 +15,7 @@ locals{
 }
 
 resource "aws_iam_user" "ex"{
-    for_each={for idx, value i local.my_list: idx=>value}
+
+    for_each = { for idx , value in local.my_list: idx=>value}
     name=each.value
 }
