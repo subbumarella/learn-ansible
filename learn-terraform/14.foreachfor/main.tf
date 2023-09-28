@@ -15,6 +15,6 @@ resource "aws_instance" "ex"{
     ami=data.aws_ami.ami_ex.id
     instance_type="t2.micro"    
     tags={
-        Name=var.user_names[count.index]
+        Name=var.user_names[count.index] 
     }    
 }
