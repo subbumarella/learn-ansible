@@ -7,7 +7,7 @@ data "aws_ami" "ami_ex" {
 variable "user_names"{
     description="IAM user"
     type=set(string)
-    default=["user14","user15","user16"]
+    default=["frontend","mongodb","catalogue"]
 }
 
 locals{
@@ -15,7 +15,6 @@ locals{
 }
 
 resource "aws_iam_user" "ex"{
-
     for_each = { for idx , value in local.my_list: idx=>value}
     name=each.value
 }

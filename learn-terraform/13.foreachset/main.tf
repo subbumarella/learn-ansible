@@ -4,14 +4,14 @@ data "aws_ami" "ami_ex" {
     name_regex="Centos-8-DevOps-Practice"
 }
 
-variable "user_names"{
+variable "instances"{
     description="IAM user names"
     type=set(string)
-    default =["user11","user12","user13"]
+    default =["frontend","mangodb","catalogue"]
 }
 
-
-resource "aws_iam_user" "ex"{
-    for_each=var.user_names
+resource "aws_instance" "ex"{
+    for_each=var.instances
     name=each.value
 }
+
