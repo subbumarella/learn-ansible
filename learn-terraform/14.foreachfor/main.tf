@@ -19,6 +19,7 @@ resource "aws_iam_user" "ex"{
     ami=data.aws_ami.ami_ex.id
     instance_type=t2.micro
     name=each.value
+    
     tags={
         Name=each.value
     }    
