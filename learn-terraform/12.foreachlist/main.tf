@@ -10,7 +10,7 @@ variable "user_names"{
     default=["user7","user8","user9"]
 }
 
-resource "aws_ami_user" "ex"{
+resource "aws_iam_user" "ex"{
     for_each=toset(var.user_names)
     name=each.value
 }
