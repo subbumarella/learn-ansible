@@ -10,7 +10,7 @@ variable "user_names"{
     default=["user5","user6","user7"]
 }
 #converting set to list
-local {
+locals {
     my_list=tolist(var.user_names)
 }
 
