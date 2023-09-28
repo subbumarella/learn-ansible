@@ -6,15 +6,15 @@ data "aws_ami" "ami_ex" {
 
 variable "user_names"{
     description="IAM user"
-    type=set(string)
+    type=list(string)
     default=["frontend","mongodb","catalogue"]
 }
 
 resource "aws_instance" "ex"{
-    for_each = { for idx , value in var.user_names: idx=>value}
+    count=length(var.user_names)    
     ami=data.aws_ami.ami_ex.id
     instance_type="t2.micro"    
     tags={
-        Name=each.value
+        Name=var.user_names[count.index]
     }    
 }
