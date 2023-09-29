@@ -4,7 +4,7 @@ data "aws_ami" "ami_ex" {
     name_regex="Centos-8-DevOps-Practice"
 }
 
-variable "user_names"{
+variable "userna_mes"{
     description="IAM user"
     type=list(string)
     default=["frontend","mongodb","catalogue"]
@@ -16,6 +16,6 @@ resource "aws_instance" "ex"{
     instance_type="t2.micro"    
     tags={
         Name=var.user_names[count.index] 
-        
+
     }    
 }
