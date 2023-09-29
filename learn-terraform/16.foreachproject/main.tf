@@ -12,7 +12,6 @@ variable "instances"{
         }
         catalogue={
             name="catalogue"
-            instance_type="t3.micro"
         }
         cart={
             name="cart"
@@ -24,7 +23,7 @@ variable "instances"{
 resource "aws_instance" "ex"{
     for_each=var.instances
     ami=data.aws_ami.ami_ex.id
-    instance_type=each.value["instance_type"]
+    instance_type=lookup(each.value,"instance_type","t3.nano")
     tags={
         Name=each.value["name"]
     }
