@@ -1,0 +1,7 @@
+- name: Print parametes from parameters store
+  hosts: local
+  connection: local
+  tasks:
+    - name: Print parameters
+      ansible.builtin.debu:
+        msg: parameters are -{{lookup('amazon.aws.aws-ssm','test',region='us-east-1')}}
