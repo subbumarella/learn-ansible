@@ -26,6 +26,6 @@ resource "aws_instance" "ex"{
     ami=data.aws_ami.ami_ex.id
     instance_type=each.value["instance_type"]
     tags={
-        Name=each.value
+        Name=each.value["name"]
     }
 }
