@@ -1,5 +1,5 @@
 - name: Print parametes from parameters store
-  hosts: localhosts
+  hosts: localhost
   connection: local
   tasks:
     - name: Print parameters
