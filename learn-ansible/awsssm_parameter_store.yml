@@ -3,5 +3,5 @@
   connection: local
   tasks:
     - name: Print parameters
-      ansible.builtin.debu:
+      ansible.builtin.debug:
         msg: parameters are -{{lookup('amazon.aws.aws-ssm','test',region='us-east-1')}}
