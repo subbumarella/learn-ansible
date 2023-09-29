@@ -24,8 +24,8 @@ variable "instances"{
 resource "aws_instance" "ex"{
     for_each=var.instances
     ami=data.aws_ami.ami_ex.id
-    instance_type=each.key["instance_type"]
+    instance_type=each.value["instance_type"]
     tags={
-        Name=each.key
+        Name=each.value
     }
 }
