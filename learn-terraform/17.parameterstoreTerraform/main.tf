@@ -1,4 +1,4 @@
-resource "aws_ssm_parameter"{
+resource "aws_ssm_parameter" "ex"{
     count=length(var.params)
     name=var.params[count.index].name
     type=var.params[count.index].type
