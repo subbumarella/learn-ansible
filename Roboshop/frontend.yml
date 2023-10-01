@@ -1,7 +1,0 @@
----
-- name: Setup Frontend
-  hosts: all
-  become: yes # To run commands as root 
-  roles:
-    - frontend
-    
