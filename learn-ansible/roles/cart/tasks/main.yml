@@ -1,0 +1,5 @@
+---
+  - name: Install Node js
+    ansible.builtin.import_role:
+      name: common
+      tasks_from: nodejs

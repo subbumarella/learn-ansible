@@ -1,0 +1,31 @@
+    - name: Install Nginx Server
+      yum:
+        name: nginx
+        state: present
+    
+    - name: Remove the Directory
+      file:
+        path: /usr/share/nginx/html
+        state: absent
+    
+    - name: Create the Directory
+      file:
+        path: /usr/share/nginx/html
+        state: directory
+    
+    - name: Download & Exctact the Roboshop Content
+      ansible.builtin.unarchive:
+        src: https://roboshop-artifacts.s3.amazonaws.com/frontend.zip 
+        dest: /usr/share/nginx/html
+        remote_src: yes
+    
+    - name: Copy Config files
+      ansible.builtin.template:
+        src: roboshop.conf
+        dest: /etc/nginx/default.d/roboshop.conf
+
+    - name: Start nginx service
+      ansible.builtin.systemd:
+        name: nginx
+        state: restarted
+        enabled: yes
